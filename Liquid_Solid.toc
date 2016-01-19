@@ -1,0 +1,9 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Mean-field theory}{1}
+\contentsline {section}{\numberline {2}The liquid-solid transition}{2}
+\contentsline {subsection}{\numberline {2.1}Introduction}{2}
+\contentsline {subsection}{\numberline {2.2}Are all crystals BCC?}{3}
+\contentsline {subsection}{\numberline {2.3}Criterion for freezing}{5}
+\contentsline {subsection}{\numberline {2.4}Improvements of the theory}{5}
+\contentsline {subsection}{\numberline {2.5}Changes in density}{6}
+\contentsline {subsection}{\numberline {2.6}Density functional theory}{7}
