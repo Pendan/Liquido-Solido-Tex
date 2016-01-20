@@ -231,8 +231,41 @@ C_l(\textbf{G}) ( n_s / n_l ) \eta_{\textbf{G}} e^{i \textbf{G} \cdot \textbf{x}
 \end{equation}
 Now, expanding the logarithm of $\langle n(\textbf{x})\rangle$ in a periodic Fourier is far more convenient than just expanding it, and thus we will obtain:
 \begin{equation}
-\frac{\langle n(\textbf{x})\rangle}{n_l} = A exp [ \sum_{\textbf{G}\neq 0} 
+\frac{\langle n(\textbf{x})\rangle}{n_l} = A exp [ \sum_{\textbf{G}\neq 0}  \zeta_{\textbf{G}}(n_s/n_l)C_l ( \textbf{G}) e^{i \textbf{G} \cdot \textbf{X}}
 \end{equation}
-
-
+At equilibrium we must have:
+\begin{equation}
+\zeta_{\textbf{G}} = \frac {
+\int d^3 x e^{-i \textbf{G} \cdot \textbf{X}} e^{\beta \bar{U}_e (\textbf{x},\zeta_{\textbf{G}},\eta_{\textbf{G}})} }
+{\int d^3 x    e^{\beta \bar{U}_e (\textbf{x},\zeta_{\textbf{G}},\eta_{\textbf{G}})} }
+\end{equation}
+where A satisfies:
+\begin{equation}
+A=e^{\beta \Delta \mu + C_l ( \textbf{q}=0 ) [(n_s/n_l)-1]}
+\end{equation}
+In practice, convergence is obtained more rapidly using the $\zeta_{\textbf{G}}$ expansion.
+Now, since even near melting temperature atoms are very well localized in the lattice, we can look for a description of the density with a limited number of variational parameters that localize atoms in the vicinity of sites in some lattice.
+A formula that goes well with this intuition is a superposition of Gaussian densities on the lattice of the form:
+\begin{equation}
+\langle n(\textbf{x})\rangle = 
+n_s \frac{v_0}{a^3} \frac{\alpha^{3/2}}{\pi^{3/2}}
+\sum_{l}e^{-\alpha(\textbf{x}-\textbf{R}_l)^2 /a^2} \equiv 
+n_s ( 1 + \sum \eta_{\textbf{G}}e^{i \textbf{G} \cdot \textbf{x} } )
+\end{equation}
+This density is normalized in such a way that its integral all over the space gives the total number of particles. The $\textbf{R}_l$ vectors are on a cubic direct lattice with primitive transition vectors of magnitude $a$, and $v_0$ is the volume of a direct lattice unit cell, while generalizations to a non-cubic lattice are pretty straightforward.
+Note that that the equilibrium state will in general have a finite density of vacnacies, thus meaning that on averag ethere will be less than one atom per unit cell. The order parametrs $\eta_{\textbf{G}}$ will satisfy the equation:
+\begin{equation}
+\eta_{\textbf{G}} = e^{-G^2 a^2 / 4 \alpha}
+\end{equation}
+If $\alpha$ is large, atoms will be well localized around a given site and the overlap of neighboring Gaussians can be neglected. Keeping this in mind, while evaluating $\Delta W$ we will get:
+\begin{equation}
+\begin{split}
+\frac{\Delta W}{T n_l V} =&
+(n_s/n_l) \bigg\{ \ln [(n_s/n_l)(v_0/a^3)(\alpha/\pi)^{3/2}]-\frac{3}{2}\bigg\}+ \\&
+-[(n_s/n_l)-1]-(n_s/n_l)\Delta\mu + \\&
+-\frac{1}{2}C_l(\textbf{q}=0)[1-(n_s/n_l)]^2 + \\&
+-\frac{1}{2} \sum_{\textbf{G} \neq 0} (n_s/n_l)^2C_l(\textbf{G}) e^{ -G^2 a^2 / 2\alpha}
+\end{split}
+\end{equation}
+This expression is to be minimized for a given liquid density $n_l$, temperature $T$ and chemical potential difference $\Delta \mu$, with respect to the variational parameters $\alpha$, $a$ and $n_s/n_l$. In the case of an incompressible system, that is $n_s/n_l = 1$, there will be only two variational parameters: $a$, the size of a unit cell, and $\alpha$, the degree of localization of the average denisty in a unit cell.
 \end{document}
